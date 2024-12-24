@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>CALMOD 4</title>
+</head>
+<body>
+    <img id="return" src="img/return.png">
+    <img id="return2" src="img/return.png" style="display: none;">
+    <img id="info" src="img/question.png">
+    <div class="home1" style="height: 100vh;">
+        <div class="homelogo" style="margin-bottom: 50px;">
+            <img src="img/logo.png">
+            <h1>CALMOD 4</h1>
+        </div>
+        <h1 id="h1title">Choisissez un module</h1>
+        <div class="btns1">
+            <div class="btn" id="btn1">
+                <img src="img/compilateur.png">
+                <h1>Compilation</h1>
+            </div>
+            <div class="btn" id="btn2">
+                <img src="img/systeme-dexploitation.png">
+                <h1>SE</h1>
+            </div>
+            <div class="btn" id="btn3">
+                <img src="img/fenetre-dapplication-avec-texte.png">
+                <h1>IHM</h1>
+            </div>
+            <div class="btn" id="btn4">
+                <img src="img/developpement-de-logiciels.png">
+                <h1>Genie Logiciel</h1>
+            </div>
+            <div class="btn" id="btn5">
+                <img src="img/des.png">
+                <h1>Probabilité</h1>
+            </div>
+            <div class="btn" id="btn6">
+                <img src="img/graphique-en-ligne (1).png">
+                <h1>PL</h1>
+            </div>
+            <div class="btn" id="btn7">
+                <img src="img/economie-numerique.png">
+                <h1>Economie numerique</h1>
+            </div>
+        </div>
+    </div>
+    <div class="home-calcul" style="display: none;">
+        <div class="module-calcul" id="content1">
+            <div class="nom-module">
+                <h1>Compilation</h1>
+                <p>Coeff: 3</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>TP</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="module-calcul" id="content2">
+            <div class="nom-module">
+                <h1>SE</h1>
+                <p>Coeff: 3</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>CC</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>TP</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="module-calcul" id="content3">
+            <div class="nom-module">
+                <h1>IHM</h1>
+                <p>Coeff: 3</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>CC</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="module-calcul" id="content4">
+            <div class="nom-module">
+                <h1>Genie Logiciel</h1>
+                <p>Coeff: 2</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>CC</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>TP</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="module-calcul" id="content5">
+            <div class="nom-module">
+                <h1>Probabilité</h1>
+                <p>Coeff: 2</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>CC</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="module-calcul" id="content6">
+            <div class="nom-module">
+                <h1>PL</h1>
+                <p>Coeff: 2</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>CC</label>
+                    <input type="number">
+                </div>
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="module-calcul" id="content7">
+            <div class="nom-module">
+                <h1>Economie numérique</h1>
+                <p>Coeff: 1</p>
+            </div>
+            <div class="inputs-module">
+                <div class="input-module">
+                    <label>EF</label>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="result">
+                <div class="input-result">
+                    <h2>Moyenne module</h2>
+                    <p></p>
+                </div>
+                <div class="input-result-credit">
+                    <h2>Credit</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const configureRedirect = (id, url) => {
+                document.getElementById(id).addEventListener("click", () => {
+                    if (id === "return") { // Vérifie si c'est le bouton "return"
+                        localStorage.setItem("redirectedFromAbout", "true");
+                    }
+                    window.location.href = url;
+                });
+            };
+        
+            configureRedirect("return", "index.html");
+            configureRedirect("return2", "module.html");
+            configureRedirect("info", "calcul.html");
+        
+            const showModule = (moduleId) => {
+                document.getElementById("h1title").style.display = "none";
+                document.getElementById("return").style.display = "none";
+                document.getElementById("return2").style.display = "flex";
+                document.querySelector(".btns1").style.display = "none";
+                document.querySelector(".home1").style.display = "none";
+                document.querySelector(".home-calcul").style.display = "flex";
+        
+                document.querySelectorAll(".module-calcul").forEach(content => {
+                    content.style.display = "none";
+                });
+        
+                document.getElementById(moduleId).style.display = "flex";
+            };
+        
+            document.querySelectorAll(".btn").forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    showModule(`content${index + 1}`);
+                });
+            });
+            document.querySelectorAll("input[type='number']").forEach(input => {
+            // Limiter les valeurs entre 0 et 20
+            input.addEventListener('input', (e) => {
+                const value = parseFloat(e.target.value);
+                if (value < 0) e.target.value = 0;
+                if (value > 20) e.target.value = 20;
+                calculerMoyenneEtCredit(e.target.closest('.module-calcul'));
+            });
+        });
+
+        function calculerMoyenneEtCredit(module) {
+            const nomModule = module.querySelector('.nom-module h1').textContent.trim();
+            const inputs = module.querySelectorAll("input[type='number']");
+            const moyenneEl = module.querySelector('.input-result p');
+            const creditEl = module.querySelector('.input-result-credit p');
+
+            let moyenne = 0;
+            switch (nomModule) {
+                case 'Compilation':
+                    const tp = parseFloat(inputs[0]?.value || 0);
+                    const ef = parseFloat(inputs[1]?.value || 0);
+                    moyenne = (0.4 * tp) + (0.6 * ef);
+                    break;
+                case 'SE':
+                case 'Genie Logiciel':
+                    const ccSE = parseFloat(inputs[0]?.value || 0);
+                    const tpSE = parseFloat(inputs[1]?.value || 0);
+                    const efSE = parseFloat(inputs[2]?.value || 0);
+                    moyenne = (0.2 * ccSE) + (0.2 * tpSE) + (0.6 * efSE);
+                    break;
+                case 'IHM':
+                case 'PL':
+                case 'Probabilité':
+                    const ccIHM = parseFloat(inputs[0]?.value || 0);
+                    const efIHM = parseFloat(inputs[1]?.value || 0);
+                    moyenne = (0.4 * ccIHM) + (0.6 * efIHM);
+                    break;
+                case 'Economie numérique':
+                    const efEco = parseFloat(inputs[0]?.value || 0);
+                    moyenne = efEco;
+                    break;
+            }
+
+            moyenne = moyenne.toFixed(2); // Arrondi à 2 décimales
+            moyenneEl.textContent = moyenne;
+
+            const credit = parseFloat(moyenne) >= 10 ? (
+                nomModule === 'Economie numérique' ? 2 :
+                ['Probabilité', 'PL'].includes(nomModule) ? 4 :
+                5
+            ) : 0;
+            creditEl.textContent = credit;
+        }
+        </script>
+        
+</body>
+</html>

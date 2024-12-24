@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>CALMOD 4</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/return.png" id="returnnav">
+        <div class="navbar-logo">
+            <img src="img/logo.png">
+            <h1>CALMOD 4</h1>
+        </div>
+        <img src="img/question.png" id="infonav">
+    </div>
+    <div class="summary">
+        <div class="summary-content">
+            <h1>Compilation <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = (40% x Note TP)+(60% x Note EF)
+            </div>
+        </div>
+        <div class="summary-content">
+            <h1>Systeme d'exploitation <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = (20% x Note CC) + (20% x Note TP) + (60% x Note EF)
+            </div>
+        </div>
+        <div class="summary-content">
+            <h1>IHM <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = (40% x Note CC) + (60% x Note EF)
+            </div>
+        </div>
+        <div class="summary-content">
+            <h1>Genie logiciel <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = (20% x Note CC) + (20% x Note TP) + (60% x Note EF)
+            </div>
+        </div>
+        <div class="summary-content">
+            <h1>Probabilité <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = (40% x Note CC) + (60% x Note EF)
+            </div>
+        </div>
+        <div class="summary-content">
+            <h1>Programmation linéaire <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = (40% x Note CC) + (60% x Note EF)
+            </div>
+        </div>
+        <div class="summary-content">
+            <h1>Économie numerique <img src="img/more.png"></h1>
+            <div class="content">
+                Moyenne = Note examen final
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("returnnav").addEventListener("click", () => {
+            localStorage.setItem("redirectedFromAbout", "true");
+            window.location.href = "index.html";
+        });
+        document.getElementById("infonav").addEventListener("click", () => {
+            window.location.href = "calcul.html";
+        });
+        document.querySelectorAll(".summary-content").forEach((element) => {
+            element.addEventListener("click", () => {
+                // Vérifier si l'élément est déjà développé
+                const isExpanded = element.classList.contains("animatesum");
+
+                // Fermer tous les autres éléments
+                document.querySelectorAll(".summary-content").forEach((el) => {
+                    el.classList.remove("animatesum");
+                    el.querySelector(".content").style.display = "none";
+                    const img = el.querySelector("h1 img");
+                    if (img) img.style.transform = "rotate(0deg)";
+                });
+
+                // Développer ou fermer l'élément cliqué
+                if (!isExpanded) {
+                    element.classList.add("animatesum");
+                    element.querySelector(".content").style.display = "flex";
+                    const img = element.querySelector("h1 img");
+                    if (img) img.style.transform = "rotate(180deg)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

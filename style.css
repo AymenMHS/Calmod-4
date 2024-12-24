@@ -1,0 +1,642 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    background: rgb(242,62,59);
+    background: linear-gradient(180deg, rgba(242,62,59,1) 0%, rgba(54,0,0,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 300px;
+    position: relative;
+}
+.wid{
+    background: rgb(242,62,59);
+    background: linear-gradient(180deg, rgba(242,62,59,1) 0%, rgba(54,0,0,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 300px;
+    position: absolute;
+    top: 0;
+    transition: top 1s ease-in-out;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.titre{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+.titre h1{
+    width: 100%;
+    min-width: 300px;
+    min-height: 60px;
+    text-align: center;
+    font-family: "Alegreya Sans SC", serif;
+    color: white;
+    font-size: 60px;
+    height: 60px;
+    text-shadow: 0px 3px 6px rgb(41, 41, 41);
+}
+.titre h3{
+    width: 100%;
+    text-align: center;
+    font-family: "Alegreya Sans SC", serif;
+    color: white;
+    font-size: 25px;
+    min-width: 300px;
+    text-shadow: 0px 3px 6px rgb(41, 41, 41);
+}
+.illu{
+    width: 200px;
+    min-width: 200px;
+}
+.wid button{
+    margin: 50px;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0);
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.wid button:hover{
+    box-shadow: 0px 6px 8px 0px rgb(0, 0, 0);
+    transition: 0.2s ease;
+}
+.wid button:active{
+    width: 290px;
+    height: 50px;
+    background-color: aliceblue;
+}
+.wid.animate {
+    top: -100vh; /* Glisse vers le haut */
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home .homelogo{
+    width: 200px;
+    min-height: 60px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.home .homelogo img{
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+}
+.home .homelogo h1{
+    font-family: "ADLaM Display", serif;
+    font-size: 25px;
+    margin: 3px;
+}
+.btns{
+    min-width: 350px;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btns .btn{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 1);
+    margin: 10px;
+    cursor: pointer;
+}
+.btns .btn:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
+    transition: 0.2s ease;
+}
+.btns .btn:active{
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    transition: 0.2s ease;
+}
+.btns .btn img{
+    width: 60px;
+    margin: 5px;
+}
+.btns .btn h1{
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 20px;
+}
+.home-calcul{
+    width: 100%;
+    background-color: white;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -5px 0px 27px 0px rgba(0, 0, 0, 1);
+}
+.home-calcul .module-calcul{
+    width: 95%;
+    height: 300px;
+    min-height: 300px;
+    background-color: #6D0000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 6px 6px 0px 0px rgb(15, 15, 15,1);
+}
+.home-calcul .module-calcul .nom-module{
+    width: 100%;
+    display: flex;
+    height: 20%;
+    align-items: center;
+    padding-left: 20px;
+}
+.home-calcul .module-calcul .nom-module h1{
+    font-family: "ADLaM Display", serif;
+    font-size: 20px;
+    background-color: #F20000;
+    border-radius: 20px;
+    color: white;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0,0.25);
+}
+.home-calcul .module-calcul .nom-module p{
+    font-family: "ADLaM Display", serif;
+    color: white;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.home-calcul::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+.home-calcul::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.home-calcul::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #474747, #b8b8b8);
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.home-calcul::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #222222, #707070);
+}
+.btn-valide{
+    width: 95%;
+    min-height: 100px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-valide button{
+    width: 200px;
+    height: 40px;
+    border: 0;
+    background-color: #6D0000;
+    color: white;
+    font-size: 25px;
+    font-family: "Alegreya Sans SC", serif;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px 0px black;
+}
+.btn-valide button:hover{
+    box-shadow: 4px 4px 4px 0px black;
+    background-color: #880000;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn-valide button:active{
+    width: 210px;
+    box-shadow: 4px 4px 4px 0px black;
+    background-color: #880000;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.module-calcul .inputs-module{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.module-calcul .inputs-module .input-module{
+    width: 70px;
+    height: 60px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.module-calcul .inputs-module .input-module label{
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 20px;
+}
+.module-calcul .inputs-module .input-module input{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #E4E4E4;
+    box-shadow: 4px 4px 0px 0px black;
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.module-calcul .inputs-module .input-module input:focus{
+    width: 60px;
+    transition: 0.2s ease;
+}
+.module-calcul .result{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.module-calcul .result .input-result{
+    width: 200px;
+    background-color: white;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0,0.25);
+}
+.module-calcul .result .input-result h2{
+    font-family: "ADLaM Display", serif;
+    font-size: 12px;
+}
+.module-calcul .result .input-result p{
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 25px;
+}
+.module-calcul .result .input-result-credit{
+    width: 100px;
+    background-color: white;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0,0.25);
+}
+.module-calcul .result .input-result-credit h2{
+    font-family: "ADLaM Display", serif;
+    font-size: 12px;
+}
+.module-calcul .result .input-result-credit p{
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 25px;
+}
+#filter{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1000;
+    display: none;
+}
+#widjet{
+    z-index: 1001;
+    width: 90%;
+    height: 30vh;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 20px;
+}
+#widjet .closewidjet{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    margin-bottom: 10px;
+}
+#widjet .closewidjet img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#widjet .closewidjet img:hover{
+    opacity: 0.5;
+    transition: 0.3s ease;
+}
+#return,#return2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 55px;
+    left: 30px;
+    cursor: pointer;
+}
+#return:hover,#return2:hover{
+    opacity: 0.5;
+    filter: invert(100%);
+    transition: 0.3s ease;
+}
+#info{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50px;
+    right: 30px;
+    cursor: pointer;
+}
+#info:hover{
+    opacity: 0.5;
+    filter: invert(100%);
+    transition: 0.3s ease;
+}
+.btns1{
+    min-width: 350px;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.btns1 .btn{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 1);
+    margin: 5px;
+    cursor: pointer;
+}
+.btns1 .btn:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
+    transition: 0.2s ease;
+}
+.btns1 .btn:active{
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    transition: 0.2s ease;
+}
+.btns1 .btn img{
+    width: 40px;
+    margin: 5px;
+}
+.btns1 .btn h1{
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+}
+.home1{
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.home1 h1{
+    font-family: "Alegreya Sans SC", serif;
+    color: white;
+    font-size: 25px;
+}
+.home1 .homelogo{
+    width: 200px;
+    min-height: 60px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.home1 .homelogo img{
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+}
+.home1 .homelogo h1{
+    font-family: "ADLaM Display", serif;
+    font-size: 25px;
+    margin: 3px;
+    color: black;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    box-shadow: 0px 0px 27px 0px black;
+}
+.navbar img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.navbar img:hover{
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+.navbar .navbar-logo{
+    background-color: white;
+    width: auto;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .navbar-logo h1{
+    font-family: "ADLaM Display", serif;
+    font-size: 25px;
+    margin: 10px;
+}
+.navbar .navbar-logo img{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.summary{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.summary .summary-content{
+    width: 90%;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2px;
+    transition: height 1s ease-in-out;
+}
+.summary .summary-content.animatesum{
+    height: 100px;
+}
+.summary .summary-content h1{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Alegreya Sans SC", serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.summary .summary-content h1 img{
+    filter: invert(100%);
+    width: 20px;
+}
+.summary .summary-content:hover h1 img{
+    filter: invert(0%);
+    transition: 0.5s ease;
+}
+.summary .summary-content:hover{
+    color: white;
+    background-color: #272727;
+    transition: 0.5s ease;
+}
+.summary .summary-content .content{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    overflow: hidden;
+    transition: display 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    font-family: "Alegreya Sans SC", serif;
+}
+.summary .summary-content.animatesum .content {
+    display: flex;
+    opacity: 1;
+}
+.about{
+    width: 95%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.about .img1{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+.about p{
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 20px;
+}
+.about .aboutlinks{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.about .aboutlinks p{
+    color: black;
+    font-weight: bold;
+}
+.about .aboutlinks .aboutlogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.about .aboutlinks .aboutlogos img{
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+    margin: 2px;
+    cursor: pointer;
+}
+.about .aboutlinks .aboutlogos img:hover{
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>CALMOD 4</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/return.png" id="returnnav">
+        <div class="navbar-logo">
+            <img src="img/logo.png">
+            <h1>CALMOD 4</h1>
+        </div>
+        <img src="img/question.png" id="infonav">
+    </div>
+    <div class="about">
+        <img src="img/info.png" class="img1">
+        <p>Développée par<br><b>Aymen Hadj Slimane</b></p>
+        <p>Cette application permet de calculer facilement votre moyenne semestrielle.</p>
+        <p>Conçue pour être simple et efficace, elle vous aide à suivre vos performances scolaires et à mieux comprendre vos résultats. Un outil pratique pour accompagner votre réussite académique.</p>
+        <div class="aboutlinks">
+            <p>Suivez-moi !</p>
+            <div class="aboutlogos">
+                <img id="fb" src="img/facebook.png">
+                <img id="insta" src="img/instagram.png">
+                <img id="github" src="img/github.png">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("returnnav").addEventListener("click", () => {
+            localStorage.setItem("redirectedFromAbout", "true");
+            window.location.href = "index.html";
+        });
+        document.getElementById("infonav").addEventListener("click", () => {
+            window.location.href = "calcul.html";
+        });
+        document.getElementById("fb").addEventListener("click", () => {
+            window.location.href = "https://www.facebook.com/profile.php?id=100009553989466";
+        });
+        document.getElementById("insta").addEventListener("click", () => {
+            window.location.href = "https://www.instagram.com/aymen_hadj.slimane/";
+        });
+        document.getElementById("github").addEventListener("click", () => {
+            window.location.href = "https://github.com/AymenMHS";
+        });
+    </script>
+</body>
+</html>
