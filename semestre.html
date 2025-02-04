@@ -34,7 +34,7 @@
                 </div>
                 <div class="inputs-module">
                     <div class="input-module">
-                        <label>TP</label>
+                        <label>CC</label>
                         <input type="number">
                     </div>
                     <div class="input-module">
@@ -61,10 +61,6 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
-                    </div>
-                    <div class="input-module">
-                        <label>TP</label>
                         <input type="number">
                     </div>
                     <div class="input-module">
@@ -117,10 +113,6 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
-                    </div>
-                    <div class="input-module">
-                        <label>TP</label>
                         <input type="number">
                     </div>
                     <div class="input-module">
@@ -284,7 +276,6 @@
         });
 
         document.querySelectorAll("input[type='number']").forEach(input => {
-            // Limiter les valeurs entre 0 et 20
             input.addEventListener('input', (e) => {
                 const value = parseFloat(e.target.value);
                 if (value < 0) e.target.value = 0;
@@ -302,17 +293,8 @@
             let moyenne = 0;
             switch (nomModule) {
                 case 'Compilation':
-                    const tp = parseFloat(inputs[0]?.value || 0);
-                    const ef = parseFloat(inputs[1]?.value || 0);
-                    moyenne = (0.4 * tp) + (0.6 * ef);
-                    break;
                 case 'SE':
                 case 'Genie Logiciel':
-                    const ccSE = parseFloat(inputs[0]?.value || 0);
-                    const tpSE = parseFloat(inputs[1]?.value || 0);
-                    const efSE = parseFloat(inputs[2]?.value || 0);
-                    moyenne = (0.2 * ccSE) + (0.2 * tpSE) + (0.6 * efSE);
-                    break;
                 case 'IHM':
                 case 'PL':
                 case 'Probabilité':
