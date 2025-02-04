@@ -35,11 +35,11 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
+                        <input type="number" name="compilation_cc">
                     </div>
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="compilation_ef">
                     </div>
                 </div>
                 <div class="result">
@@ -61,11 +61,11 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
+                        <input type="number" name="se_cc">
                     </div>
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="se_ef">
                     </div>
                 </div>
                 <div class="result">
@@ -87,11 +87,11 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
+                        <input type="number" name="ihm_cc">
                     </div>
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="ihm_ef">
                     </div>
                 </div>
                 <div class="result">
@@ -113,11 +113,11 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
+                        <input type="number" name="gl_cc">
                     </div>
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="gl_ef">
                     </div>
                 </div>
                 <div class="result">
@@ -139,11 +139,11 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
+                        <input type="number" name="proba_cc">
                     </div>
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="proba_ef">
                     </div>
                 </div>
                 <div class="result">
@@ -165,11 +165,11 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>CC</label>
-                        <input type="number">
+                        <input type="number" name="pl_cc">
                     </div>
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="pl_exam">
                     </div>
                 </div>
                 <div class="result">
@@ -191,7 +191,7 @@
                 <div class="inputs-module">
                     <div class="input-module">
                         <label>EF</label>
-                        <input type="number">
+                        <input type="number" name="eco_ef">
                     </div>
                 </div>
                 <div class="result">
@@ -211,6 +211,25 @@
         </div>
     </div>
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputs = document.querySelectorAll("input[type='number']");
+
+            // Charger les valeurs sauvegardées depuis localStorage
+            inputs.forEach(input => {
+                const savedValue = localStorage.getItem(input.name);
+                if (savedValue !== null) {
+                    input.value = savedValue;
+                }
+            });
+
+            // Sauvegarder les valeurs dans localStorage à chaque modification
+            inputs.forEach(input => {
+                input.addEventListener("input", () => {
+                    localStorage.setItem(input.name, input.value);
+                });
+            });
+        });
+
         document.getElementById("calcultotal").addEventListener("click", () => {
             const modules = document.querySelectorAll('.module-calcul');
             const coefMap = {
